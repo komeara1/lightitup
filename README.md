@@ -34,7 +34,7 @@ $ tplink_smart_bulb_communicator.py -t ipaddress -c command
 
 ## Notes
 * Tested on TP-Link Light Bulb Model LB-110 
-* Python script was tested on Kali Linux with Python 2.7
+* Light It Up was tested on Kali Linux with Python 2.7
 * TP-Link Smart Home Protocol encryption XOR key (171 or 0xab), see References.
 * Reserve engineered the payloads of the light bulb communication to determine the commands accepted by light bulb (not-exhaustive).
 * Key discovery, for light bulb, the first 4 bytes of the payload are 3 null bytes followed by the 4th byte being the length of the command.
