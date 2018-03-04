@@ -11,7 +11,7 @@ Preset Smart Bulb Commands:  <br />
 * tz - timezone of light bulb
 * getstate - status of light bulb
 * sysinfo - information of light bulb
-* bright - set light bulb brightness
+* bright - set light bulb brightness at 50%
 * cldfwinfo - information of light bulb firmware
 
 

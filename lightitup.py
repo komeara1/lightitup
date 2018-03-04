@@ -10,7 +10,7 @@ commands = {'on'   	       : '{"smartlife.iot.smartbulb.lightingservice":{"trans
 			'sysinfo'      : '{"system":{"get_sysinfo":{}}}',
 			'tz'           : '{"smartlife.iot.common.timesetting":{"get_timezone":{}}}',
 			'getstate'     : '{"system":{"get_light_state":{}}}',
-			'bright'   	   : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"brightness":1}}}',
+			'bright'   	   : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"brightness":50}}}',
 			'cldfwinfo'	   : '{"smartlife.iot.common.cloud":{"get_intl_fw_list":{}}}'
 				
 }
