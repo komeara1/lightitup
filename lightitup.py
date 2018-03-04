@@ -43,12 +43,12 @@ def main():
 	join_cmd = ", ".join(commands)
 	
 	# Command Line Arguments
-	parser = argparse.ArgumentParser(description="TP-Link Wi-Fi Smart Blub Attack")
-	parser.add_argument("-t", "--target", required=True, help="Target IP Address")
+	parser = argparse.ArgumentParser(description="Light It Up: TP-Link Light Bulb Communicator")
+	parser.add_argument("-t", "--target", required=True, help="Light Bulb IP Address")
 	parser.add_argument("-c", "--command", help="Preset command to send. Choices are: %s" % join_cmd, choices=commands) 
 	args = parser.parse_args()
 	
-	# User input IP and Ccommand
+	# User input IP and Command
 	ip = args.target
 	cmd = commands[args.command]
 
