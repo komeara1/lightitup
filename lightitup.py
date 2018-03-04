@@ -2,22 +2,21 @@ import socket
 import argparse
 
 
-# Predefined Smart Blug Commands RE'd from Network and App Analysis
-commands = {'bulbon'   : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"on_off":1}}}',
-			'bulbgettime'  : '{"smartlife.iot.common.timesetting":{"get_time":{}}}',
-			'bulboff'      :  '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"on_off":0}}}',
-			'bulbreboot'   : '{"smartlife.iot.common.system":{"reboot":{"delay":1}}}',
-			'bulbsysinfo'  : '{"system":{"get_sysinfo":{}}}',
-			'bulbtz'       : '{"smartlife.iot.common.timesetting":{"get_timezone":{}}}',
-			'bulbgetstate'  : '{"system":{"get_light_state":{}}}',
-			'bulbbright'    : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"brightness":1}}}',
-			'cldfm'			: '{"smartlife.iot.common.cloud":{"get_intl_fw_list":{}}}'
+# Predefined Smart Blug Commands
+commands = {'on'   	       : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"on_off":1}}}',
+			'gettime'      : '{"smartlife.iot.common.timesetting":{"get_time":{}}}',
+			'off'          :  '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"on_off":0}}}',
+			'reboot'       : '{"smartlife.iot.common.system":{"reboot":{"delay":1}}}',
+			'sysinfo'      : '{"system":{"get_sysinfo":{}}}',
+			'tz'           : '{"smartlife.iot.common.timesetting":{"get_timezone":{}}}',
+			'getstate'     : '{"system":{"get_light_state":{}}}',
+			'bright'   	   : '{"smartlife.iot.smartbulb.lightingservice":{"transition_light_state":{"brightness":1}}}',
+			'cldfwinfo'	   : '{"smartlife.iot.common.cloud":{"get_intl_fw_list":{}}}'
 				
 }
 	
 # Encryption of TP-Link Smart Home Protocol
 def encrypt(string, length):
-	#Static Key 0xab (171)
 	key = 171	
 	#Padding Bytes
 	result = "\x00\x00\x00"
