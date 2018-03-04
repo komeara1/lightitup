@@ -24,12 +24,12 @@ Preset Smart Bulb Commands:  <br />
 
 ## Usage
 ```
-$ tplink_smart_bulb_communicator.py --help
+$ lightitup.py --help
 ```
 
 Pass IP Address of Smart Light Bulb and command
 ```
-$ tplink_smart_bulb_communicator.py -t ipaddress -c command
+$ lightitup.py -t ipaddress -c command
 ```
 
 ## Notes
